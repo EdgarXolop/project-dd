@@ -40,8 +40,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 
         http
             .authorizeRequests()
-            .antMatchers(UtilConstants.LOGIN_PAGE).permitAll()
-            .anyRequest().authenticated();
+            //.antMatchers(UtilConstants.LOGIN_PAGE).permitAll()
+            //.anyRequest().authenticated();
+            .anyRequest().permitAll();
         
         http.exceptionHandling().accessDeniedPage(UtilConstants.DENIED_PAGE);
 
